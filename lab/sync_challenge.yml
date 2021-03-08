@@ -1,0 +1,8 @@
+- hosts: web
+  tasks:
+    - name: "Hello"
+      replace:
+        path: /var/www/default/index.html
+        regexp: "61070141"
+        replace: "{{ inventory_hostname }}"
+    
